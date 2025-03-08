@@ -1,0 +1,13 @@
+<div class="main-container">
+  <div class="topic-container" *ngIf="!isTopicSelected">
+    <div *ngFor="let topic of topics" class="card">
+      <span>{{ topic.title }}</span>
+      <h3>{{ topic.description }}</h3>
+      <button (click)="setTopic(topic.title)">Quiz</button>
+    </div>
+  </div>
+  <div *ngIf="isTopicSelected" class="quiz-area">
+    <app-questionform class="question-form" [topic]="topic"></app-questionform>
+    <app-quiz class="quiz-area" [questions]="questions"></app-quiz>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="main-container">
+  <h1>Quiz</h1>
+  <div class="question-list">
+    <ul>
+      <li *ngFor="let question of questions" class="question-container">
+        <div class="q-container">Question:{{ question.question }} - <h3>{{question.exam}}</h3></div>
+        <div class="option-container">
+          <span (click)="selectOption(question, question.option1)"
+            >1.{{ question.option1 }}</span
+          >
+          <span (click)="selectOption(question, question.option1)"
+            >2.{{ question.option2 }}</span
+          >
+          <span (click)="selectOption(question, question.option1)"
+            >3.{{ question.option3 }}</span
+          >
+          <span (click)="selectOption(question, question.option1)"
+            >4.{{ question.option4 }}</span
+          >
+          <span *ngIf="question.isCorrect" class="correct-ans"
+            >Correct Ans:{{ question.answer }}</span
+          >
+        </div>
+      </li>
+      <!-- <li  class="question-container">
+        <div class="q-container">Question:question</div>
+        <div class="option-container">
+          <span>1.option</span>
+          <span>1.option</span>
+          <span>1.option</span>
+          <span>1.option</span>
+          <span class="correct-ans">ans</span>
+        </div>
+      </li>
+      <li class="question-container">
+        <div class="q-container">Question:question</div>
+        <div class="option-container">
+          <span>1.option</span>
+          <span>1.option</span>
+          <span>1.option</span>
+          <span>1.option</span>
+          <span class="correct-ans">ans</span>
+        </div>
+      </li> -->
+    </ul>
+  </div>
+</div>
