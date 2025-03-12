@@ -7,6 +7,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { QuizService } from '../../services/quiz.service';
+import { CommonModule } from '@angular/common';
 
 interface Question {
   question: string;
@@ -22,12 +23,15 @@ interface Question {
 }
 @Component({
   selector: 'app-questionform',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule,CommonModule],
   templateUrl: './questionform.component.html',
   styleUrl: './questionform.component.scss',
 })
 export class QuestionformComponent {
   quizService = inject(QuizService);
+  isVisible:boolean=false;
+  text:string = 'Add';
+
   @Input() topic: string = '';
   questionForm!: FormGroup;
   newQuestion: Question = {
@@ -70,4 +74,11 @@ export class QuestionformComponent {
     this.quizService.addQuestion(this.topic,this.newQuestion);
 
   }
+  openForm(){
+    this.isVisible = !this.isVisible; 
+    this.text=!this.isVisible?"Add":"❌";
+   }
 }
+
+
+

@@ -1,7 +1,8 @@
-<div class="form-container">
-  <h1>Upload Question</h1>
-  <form class="main-form" [formGroup]="questionForm" (submit)="onSubmit()">
-    <div class="form-field">
+<div class="form-container" [ngClass]="isVisible?'show':'hide'" >
+  <button class="btn" (click)="openForm()" >{{text}}</button>
+  <form class="main-form"  [formGroup]="questionForm" (submit)="onSubmit()">
+    <div class="heading">Add Question</div>
+    <div class="form-field ">
       <!-- <label for="question">question:</label> -->
       <input
         type="text"
@@ -80,7 +81,8 @@
           placeholder="Enter sub topic ,example - medival"
         />
       </div>
-      <button type="submit">Submit</button>
+      <button class="submitButton" type="submit">Submit</button>
+      <button class="submitButton" type="reset">Reset</button>
     </div>
   </form>
 </div>

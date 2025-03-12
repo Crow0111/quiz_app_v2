@@ -7,7 +7,7 @@
     </div>
   </div>
   <div *ngIf="isTopicSelected" class="quiz-area">
-    <app-questionform class="question-form" [topic]="topic"></app-questionform>
-    <app-quiz class="quiz-area" [questions]="questions"></app-quiz>
+      <app-questionform  class="question-form" [topic]="topic" ></app-questionform>
+    <app-quiz  [questions]="questions"></app-quiz>
   </div>
 </div>

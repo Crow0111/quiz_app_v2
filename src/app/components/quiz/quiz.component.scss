@@ -1,11 +1,10 @@
 .main-container{
-    // border: 1px solid rgb(255, 10, 10);
     width: 100%;
-    height: fit-content;
+    height: 100%;
     padding:0;
-    margin: 0.5rem;
+    padding-top: 3rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgb(255, 181, 181);
+    // background-color: #F5E6CA;
 }
 
 .question-list{
@@ -20,10 +19,10 @@
 
 .question-container{
     border: 1px solid black;
-    padding: 1rem;
+    padding: 0.5rem;
     margin-bottom: 1rem;
     border-radius: 10px;
-    background-color: rgb(255, 134, 134);
+    background-color: #F5E6CA;
 }}
 
 .option-container{
@@ -41,7 +40,7 @@
     display: flex;
     flex-direction: column;
     margin-top:0.5rem;
-    background-color: rgb(251, 101, 101);
+    background-color: #F5E6CA;
 }
 
 .q-container{

@@ -15,6 +15,7 @@ export class MainComponent {
   questions:any[]=[]
   topic: string = '';
   isTopicSelected:boolean=false;
+  
   topics = [
     {
       title: 'History',
@@ -55,5 +56,6 @@ export class MainComponent {
       console.log(this.questions)
     })
    }
+
 
 }
