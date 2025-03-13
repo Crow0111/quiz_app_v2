@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-  isOpen:boolean=true;
+  isOpen:boolean=false;
   burgerButton = '🟰';
 
   toggleMenu(){

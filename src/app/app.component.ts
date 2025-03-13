@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { MainComponent } from "./components/main/main.component";
 import { NavbarComponent } from "./components/navbar/navbar.component";
+import { QuestioncardComponent } from "./components/questioncard/questioncard.component";
 
 @Component({
   selector: 'app-root',
@@ -11,4 +12,5 @@ import { NavbarComponent } from "./components/navbar/navbar.component";
 })
 export class AppComponent {
   title = 'quiz-app-2';
+   
 }

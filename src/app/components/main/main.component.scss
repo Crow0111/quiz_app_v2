@@ -21,6 +21,7 @@
     display: flex;
     flex-direction: row;
     position: relative;
+    top: 5rem;
     width: 100%;
     // background-color: #F5E6CA;
     height: 100vh;
@@ -85,14 +86,17 @@
 
   @media(max-width:768px){
     .main-container{
-        width: 100vw;
+        width: 100%;
         box-sizing: border-box;
-        padding-left: 4rem;
+        padding-left: 0rem;
     }
     .quiz-area{
         flex-direction: column;
         width: 100vw;
         align-content: center;
-        justify-content: center;
+    }
+    .topic-container{
+      padding-left: 5rem;
+      padding-right: auto;
     }
   }

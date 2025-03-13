@@ -1,6 +1,7 @@
 import { Component, inject, Input } from '@angular/core';
 import { QuizService } from '../../services/quiz.service';
 import { CommonModule } from '@angular/common';
+import { QuestioncardComponent } from "../questioncard/questioncard.component";
 
 interface Question {
   question: string;
@@ -16,7 +17,7 @@ interface Question {
 }
 @Component({
   selector: 'app-quiz',
-  imports: [CommonModule],
+  imports: [CommonModule, QuestioncardComponent],
   templateUrl: './quiz.component.html',
   styleUrl: './quiz.component.scss'
 })

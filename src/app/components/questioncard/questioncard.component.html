@@ -1,0 +1,41 @@
+<!-- question.subtopic is used as details here -->
+
+<div class="question-container">
+    <div class="question">
+        {{questionNo}}.{{question.question}}
+    </div>
+    <div class="option-section">
+        <div class="option">
+            <ul>
+                <li (click)="checkAnswer(question.option1)" [ngClass]="{
+                    'correct': question.selectedOption === question.option1 && question.isCorrect,
+                    'wrong': question.selectedOption === question.option1 && question.isCorrect === false,
+                  }" >
+                    {{question.option1}}
+                </li>
+                <li (click)="checkAnswer(question.option2)" [ngClass]="{
+                    'correct': question.selectedOption === question.option2 && question.isCorrect,
+                    'wrong': question.selectedOption === question.option2 && question.isCorrect === false,
+                  }" >
+                    {{question.option2}}
+                </li>
+                <li (click)="checkAnswer(question.option3)" [ngClass]="{
+                    'correct': question.selectedOption === question.option3 && question.isCorrect,
+                    'wrong': question.selectedOption === question.option3 && question.isCorrect === false,
+                  }" >
+                    {{question.option3}}
+                </li>
+                <li (click)="checkAnswer(question.option4)" [ngClass]="{
+                    'correct': question.selectedOption === question.option4 && question.isCorrect,
+                    'wrong': question.selectedOption === question.option4&& question.isCorrect === false,
+                  }" >
+                    {{question.option4}}
+                </li>
+            </ul>
+        </div>
+        <div class="answer" *ngIf="isSelected&&iscloseDetail" [class.disabled]="isSelected">
+            <div class="correct-answer">Ans:{{question.answer}}</div> <p>{{question.subtopic}}</p>
+            <div (click)="closeDetails()" class="btn" >❌</div>
+        </div>
+    </div>
+</div>

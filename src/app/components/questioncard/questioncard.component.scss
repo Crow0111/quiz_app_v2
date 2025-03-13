@@ -1,0 +1,125 @@
+.question-container{
+    border: 5px solid black;
+    height: fit-content;
+    width: 93vw;
+    margin: 0.5rem;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: #F5E6CA;
+}
+
+.question{
+    color: #5D4037;
+    height: 3rem;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    box-sizing: border-box;
+}
+
+.option-section{
+    height: 15rem;
+    display: flex;
+    flex-direction: row;    
+    box-sizing: border-box;
+}
+
+.option{
+    width: 30%;
+    box-sizing: border-box;
+    height: 12rem;
+}
+
+.option ul{
+    margin-left:1.5rem ;
+    margin-top: 1.5rem;
+    list-style: none;
+}
+.option li{
+    margin-bottom:0.1rem ;
+    border: 3px solid black;
+    height:2.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #5D4037;
+    width: 95%;
+    padding-left: 2rem;
+    padding-top: 0.5rem;
+    border-radius:10px ;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.answer{
+    width: 60%;
+    font-size: larger;
+    padding: 1.5rem;
+    color: #5D4037;
+    background-color: #F5E6CA;
+    border-left: 2px solid #5D4037;
+
+    position: relative;
+
+}
+
+.answer p{
+    font-size: 0.9rem;
+}
+
+.correct-answer{
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.correct{
+    background-color: rgb(95, 216, 95);
+}
+.wrong{
+    background-color: rgb(252, 114, 114);
+}
+
+.btn{
+    display: none;
+}
+
+@media(max-width:768px){
+    .question-container{
+        width: 85vw;
+    }
+    .option-section{
+        height: 15rem;
+        display: flex;
+        flex-direction: column; 
+        border-left:none;   
+    }
+    .question{
+        margin-bottom: 3rem;
+    }
+
+    .option{
+        width: 85vw;
+        box-sizing: border-box;
+        border-left:none;
+        height: 12rem;
+    }
+    .answer{
+        width: 80vw;
+        font-size: larger;
+        margin-top: 2rem;
+        border: 2px solid #5D4037;
+        margin: -1rem;
+    
+    }
+    .question-container{
+        height: max-content;
+    }
+
+    .btn{
+        position: absolute;
+        top: 0.1rem;
+        right:0.1rem;
+        display: block;
+
+    }
+
+}

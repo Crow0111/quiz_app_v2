@@ -2,8 +2,9 @@
     width: 100%;
     height: 100%;
     padding:0;
-    padding-top: 3rem;
+    padding-top: 1rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
     // background-color: #F5E6CA;
 }
 
@@ -62,3 +63,4 @@
 .wrong{
     background-color: rgb(253, 49, 49);
 }
+
