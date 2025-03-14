@@ -1,1 +1,14 @@
-<p>feedback works!</p>
+<div  class="feedback-container">
+    <h2>Feedback Form</h2>
+    <form [formGroup]="feedbackForm" (submit)="submitFeedback()">
+      <label for="title">Title</label>
+      <input type="text" id="title" formControlName="title" name="title" required />
+  
+  
+      <label for="suggestion">Suggestion</label>
+      <textarea id="suggestion" rows="4" formControlName="suggestion" name="suggestion" required></textarea>
+  
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  

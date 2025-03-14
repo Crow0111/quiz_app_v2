@@ -1,0 +1,39 @@
+.about-container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: #F5E6CA;
+    color: #5D4037;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    top: 4rem;
+    position: relative;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #5D4037;
+  }
+  
+  p, ul {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  ul {
+    list-style-type: square;
+    padding-left: 20px;
+  }
+  
+  section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  .help-section {
+    background-color: #E1C7A2;
+    padding: 15px;
+  }
+  

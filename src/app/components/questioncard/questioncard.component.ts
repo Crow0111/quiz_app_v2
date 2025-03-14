@@ -16,24 +16,27 @@ interface Question {
 
 @Component({
   selector: 'app-questioncard',
-  imports: [ CommonModule],
+  imports: [CommonModule],
   templateUrl: './questioncard.component.html',
   styleUrl: './questioncard.component.scss',
 })
 export class QuestioncardComponent {
-  isSelected:boolean=false;
-  
-  iscloseDetail:boolean=true;
-  @Input()questionNo!:number;
-  @Input()question!:Question;
+  isSelected: boolean = false;
 
-  checkAnswer(option:string){
+  iscloseDetail: boolean = true;
+  @Input() questionNo!: number;
+  @Input() question!: Question;
+
+  checkAnswer(option: string) {
     this.question.selectedOption = option;
-    this.question.isCorrect = this.question.selectedOption.trim() === this.question.answer.trim()?true:false;
-    this.isSelected=true;
+    this.question.isCorrect =
+      this.question.selectedOption.trim() === this.question.answer.trim()
+        ? true
+        : false;
+    this.isSelected = true;
   }
 
-  closeDetails(){
+  closeDetails() {
     this.iscloseDetail = false;
   }
 }

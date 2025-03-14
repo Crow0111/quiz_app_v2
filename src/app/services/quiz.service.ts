@@ -16,6 +16,9 @@ interface Question{
   subtopic: string;
   
 }
+interface Feeback{
+  title: '', suggestion: ''
+}
 
 @Injectable({
   providedIn: 'root'
@@ -40,6 +43,11 @@ export class QuizService {
       console.log(data)
     })
     return fetchedData;
+  }
 
+  async createFeedBack(feedback:Feeback){
+    const feedbackCollection = collection(this.firestore,'feedback');
+    await addDoc(feedbackCollection,feedback);
+    console.log("Form Submitted");
   }
 }
